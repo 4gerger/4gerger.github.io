@@ -216,7 +216,9 @@ function saveCurrentScore() {
             name: initials
         };
 
-        highScores.push(potentialHighScore);
+        // highScores = localStorage.getItem("highScores");
+
+        // highScores.push(potentialHighScore);
 
         localStorage.setItem("highScores", JSON.stringify(potentialHighScore));
 
@@ -237,12 +239,11 @@ function saveCurrentScore() {
         var submitEl = document.querySelector(".submitEl");
         submitEl.parentNode.removeChild(submitEl);
 
-        // console.log("clicked the submit button")
     }); 
 
 }
 
-// function highScorePage() {
+function highScorePage() {
     
 //     viewHighScoreEl.classList.add("hide");
 //     timerEl.classList.add("hide");
@@ -252,7 +253,7 @@ function saveCurrentScore() {
 //     initialInputEl.parentNode.removeChild(initialInputEl);
 //     submitEl.parentNode.removeChild(submitEl);
 
-// }
+}
 
 function finalScore() {
     finalScore = score + secondsLeft * 5
