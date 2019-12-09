@@ -1,0 +1,34 @@
+.timer{
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.mainHeading{
+    text-align: center;
+}
+
+.description{
+    text-align: center;
+}
+
+.start-btn{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+}
+
+.container{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hide {
+    display: none;
+}

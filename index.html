@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap Quiz</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./Assets/style.css">
+</head>
+
+<body>
+    <h1 class="viewHighscores">View Highscores</h1>
+    <h1 class="timer">Time: 75s Left</h1>
+
+    <div class="startSection">
+        <header>
+            <h1 class="mainHeading">Coding Quiz Challenge</h1>
+        </header>
+
+        <p class="description">Try to answer the following code-related questions within the time
+            limit. Keep in mind that incorrect answers will penalize your
+            score/time by ten seconds!
+        </p>
+
+        <div>
+            <button class="start-btn">Start Quiz</button>
+        </div>
+    </div>
+    <div class="container">
+        <div id="question-container"></div>
+        <div id="answer-container" class=bth-grid></div>
+        <div id="alert"></div>
+        <h2 id="finished"></h2>
+        <p id="final-score"></p>
+    </div>
+        <script src="./Assets/script1.js"></script>
+</body>
+
+
+</html>
