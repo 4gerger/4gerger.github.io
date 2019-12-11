@@ -60,8 +60,10 @@ var answersEl = document.querySelector("#answer-btns");
 var alertEl = document.querySelector("#alert");
 var completionEl = document.querySelector("#finished");
 var resultEl = document.querySelector("#final-score");
+var highScoreEl = document.querySelector("#high-score");
+var scoreBoardEl = document.querySelector("#score-board");
 
-var highScores = JSON.parse(localStorage.getItem("highScores"));
+var highScores;
 
 var currentQuestionIndex = 0;
 
@@ -239,19 +241,27 @@ function saveCurrentScore() {
         var submitEl = document.querySelector(".submitEl");
         submitEl.parentNode.removeChild(submitEl);
 
+        highScorePage();
     }); 
 
 }
 
 function highScorePage() {
-    
-//     viewHighScoreEl.classList.add("hide");
-//     timerEl.classList.add("hide");
-//     message.parentNode.removeChild(message);
-//     result.parentNode.removeChild(result);
-//     enterInitialEl.parentNode.removeChild(enterInitialEl);
-//     initialInputEl.parentNode.removeChild(initialInputEl);
-//     submitEl.parentNode.removeChild(submitEl);
+    var initialInputEl = document.querySelector(".initialInputEl");
+    initialInputEl.classList.remove("hide");
+    initialInputEl.parentNode.removeChild(initialInputEl);
+
+    var highScoreHeading = document.createElement("div");
+    highScoreHeading.classList.add("title");
+    highScoreHeading.textContent = "Highscore";
+    highScoreEl.appendChild(highScoreHeading);
+
+
+    var highScores = JSON.parse(localStorage.getItem("highScores"));
+    var scoreBoard = document.createElement("li");
+    scoreBoard.classList.add("highscore-list");
+    scoreBoard.textContent = highScores;
+    scoreBoardEl.appendChild(scoreBoard);
 
 }
 
